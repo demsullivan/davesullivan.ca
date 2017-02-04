@@ -6,7 +6,7 @@
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>Dave Sullivan<%= ' - ' + current_page.data.title %></title>
+    <title>Dave Sullivan<%= ' - ' + current_page.data.title unless current_page.data.title.nil? %></title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Open+Sans:400,700" rel="stylesheet">
 

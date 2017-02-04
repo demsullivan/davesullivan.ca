@@ -48,6 +48,12 @@ configure :development do
   activate :livereload
 end
 
+
+helpers do
+  def published_articles(articles)
+    articles.select {|a| !a.data.draft }
+  end
+end
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper

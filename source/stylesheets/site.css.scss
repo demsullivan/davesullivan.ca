@@ -5,10 +5,10 @@ $bg-color: #ede8e8;
 $link-color: #910000;
 $mobile-breakpoint: 480px;
 
+@import "header";
 
 body {
   background: $bg-color;
-  // background: #ECC561;
   text-align: center;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
@@ -16,7 +16,6 @@ body {
 
 
 h1 {
-  // color: rgba(0,0,0,0.5);
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.8em;
   font-weight: 400;
@@ -35,46 +34,6 @@ a:hover {
 
 a:visited {
   color: $link-color - #555;
-}
-
-.header {
-  margin: 0px 50px;
-  text-align: left;
-  display: flex;
-
-  .logo {
-    flex: 1;
-    font-family: 'Open Sans', sans-serif;
-    color: #e84c3d;
-    font-size: 36px;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-
-  .logo-black {
-    color: #666;
-    text-transform: uppercase;
-    font-weight: normal;
-  }
-
-  .nav {
-    text-align: right;
-    flex: 2;
-
-    ul {
-      list-style: none;
-
-      li {
-        display: inline;
-        margin-right: 40px;
-
-        a {
-          text-transform: uppercase;
-          font-weight: bold;
-        }
-      }
-    }
-  }
 }
 
 .with-gutters {

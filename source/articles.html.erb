@@ -1,15 +1,16 @@
 ---
-pageable: true
-per_page: 12
+title: All Articles
+date: 2017-02-04
 ---
 
 <div class="homepage with-gutters">
-  <h1>Articles tagged '<%= tagname %>'</h1>
+  <h1>All Articles</h1>
 
   <div class="list">
     <ul>
-      <% published_articles(page_articles).each do |article| %>
+      <% published_articles(blog.articles).each do |article| %>
         <li><%= link_to article.title, article %></li>
       <% end %>
     </ul>
+  </div>
 </div>
