@@ -1,0 +1,159 @@
+@charset "utf-8";
+@import "normalize";
+
+$bg-color: #ede8e8;
+$link-color: #910000;
+$mobile-breakpoint: 480px;
+
+
+body {
+  background: $bg-color;
+  // background: #ECC561;
+  text-align: center;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+}
+
+
+h1 {
+  // color: rgba(0,0,0,0.5);
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.8em;
+  font-weight: 400;
+  margin: 0;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $link-color + #555;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: $link-color - #555;
+}
+
+.header {
+  margin: 0px 50px;
+  text-align: left;
+  display: flex;
+
+  .logo {
+    flex: 1;
+    font-family: 'Open Sans', sans-serif;
+    color: #e84c3d;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .logo-black {
+    color: #666;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+
+  .nav {
+    text-align: right;
+    flex: 2;
+
+    ul {
+      list-style: none;
+
+      li {
+        display: inline;
+        margin-right: 40px;
+
+        a {
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.with-gutters {
+  margin: 0px auto;
+
+  @media screen and (min-width: $mobile-breakpoint) {
+    max-width: 60%;
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.headshot {
+  width: 128px;
+  border-radius: 64px;
+  border: 1px solid #c0c0c0;
+}
+
+.homepage {
+  margin-top: 50px;
+
+  h1 {
+    margin-top: 25px;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  p {
+    text-align: left;
+    font-size: 1.2em;
+  }
+
+  li {
+    font-size: 1.2em;
+  }
+
+  .list {
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .cta {
+
+    @media screen and (min-width: $mobile-breakpoint) {
+      width: 75%;
+    }
+
+    margin: 0 auto;
+    border: 2px solid $bg-color + #666;
+    background: $bg-color - #444;
+
+    p {
+      font-size: 1em;
+      margin: 10px 40px;
+    }
+
+    .email, .email-success {
+      margin-bottom: 20px;
+
+      @media screen and (max-width: $mobile-breakpoint) {
+        width: 50%;
+        margin: 0 auto 20px auto;
+
+        input {
+          margin: 5px;
+        }
+      }
+    }
+
+    .email-success {
+      display: none;
+    }
+  }
+}

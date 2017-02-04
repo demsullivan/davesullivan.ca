@@ -1,0 +1,42 @@
+---
+title: "Home"
+noheader: true
+---
+
+<div class="homepage with-gutters">
+  <%= image_tag 'headshot.jpg', :class => 'headshot' %>
+
+  <h1>Dave Sullivan - Senior Full-stack Engineer</h1>
+
+  <p>Hi! I'm Dave Sullivan, and I build, manage and scale web applications that help my clients achieve their business goals.</p>
+
+  <h2>Are you looking for a skilled engineer who will...</h2>
+
+  <p>
+    <div class="list">
+      <ul>
+        <li><strong>take charge</strong> and help you identify the most efficient use of your limited resources?</li>
+        <li>consider your <strong>overall business goals</strong> and suggest ways to achieve them?</li>
+        <li>provide <strong>regular status updates</strong> so you're not in the dark?</li>
+      </ul>
+    </div>
+  <p>
+
+  <p>
+    At the heart of my client relationships is my belief that software is meant to solve real-world problems. It's important to me to know that I am solving real problems and delivering real value to my customers, and that I'm doing so while working hard to maintain a balance between quality and efficiency.
+  </p>
+
+  <%= partial "cta" %>
+
+  <h3>Want to know more?</h3>
+
+  <p>Here's a couple of articles I've written recently:</p>
+
+  <div class="list">
+    <ul>
+      <% blog.articles[0..5].each do |article| %>
+        <li><%= link_to article.title, article %></li>
+      <% end %>
+    </ul> 
+  </div>
+</div>
