@@ -28,7 +28,7 @@ activate :blog do |blog|
   blog.sources = "{title}.html"
   blog.taglink = "tags/{tag}.html"
 
-  blog.layout = "layout"
+  blog.layout = "article_layout"
   blog.summary_separator = /(READMORE)/
   blog.summary_length = 250
   blog.default_extension = ".markdown"
